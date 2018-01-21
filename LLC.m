@@ -6,13 +6,13 @@ pyramid = [1, 2, 4];                % spatial block structure for the SPM
 %pyramid = [2];
 knn = 5;                            % number of neighbors for local coding
 
-test_data_dir='D:\Documents\Tencent Files\1432874755\FileRecv\³ÌĞò\HOG\HOG_llc\features';
-%ÌØÕ÷ËùÔÚµÄÎÄ¼ş¼Ğ
-test_fea_dir='D:\Documents\Tencent Files\1432874755\FileRecv\³ÌĞò\HOG\HOG_llc\feature';
-%LLCºÍ¼ÓÈ¨SPMºóµÃµ½µÄ×îÖÕÌØÕ÷´æ·ÅµÄÎÄ¼ş¼Ğ
+test_data_dir='D:\Documents\Tencent Files\1432874755\FileRecv\ç¨‹åº\HOG\HOG_llc\features';
+%ç‰¹å¾æ‰€åœ¨çš„æ–‡ä»¶å¤¹,è¿™é‡Œç‰¹å¾æ‰€åœ¨çš„æ–‡ä»¶æ˜¯æŒ‡åœ¨extrFeatureä¸­æŒ‡å®šçš„é‚£ä¸ªè¾“å‡ºç‰¹å¾çš„æ–‡ä»¶ï¼Œå› ä¸ºå¦‚æœæˆ‘ä»¬åªæœ‰ä¸€ç±»ï¼Œåˆ™åœ¨é‚£ä¸ªæ–‡ä»¶å¤¹ä¸­è¿˜æœ‰ä¸€ä¸ªæ–‡ä»¶å¤¹ï¼Œä½†ä¸è¦å†™æˆé‚£ä¸ªæ–‡ä»¶å¤¹
+test_fea_dir='D:\Documents\Tencent Files\1432874755\FileRecv\ç¨‹åº\HOG\HOG_llc\feature';
+%LLCå’ŒåŠ æƒSPMåå¾—åˆ°çš„æœ€ç»ˆç‰¹å¾å­˜æ”¾çš„æ–‡ä»¶å¤¹
 test_database = retr_database_dir(test_data_dir);
-Bpath = ['D:\Documents\Tencent Files\1432874755\FileRecv\³ÌĞò\HOG\HOG_llc\dictionary\center.mat'];
-%¾ÛÀà½á¹ûËù´æ·ÅµÄmatÎÄ¼ş
+Bpath = ['D:\Documents\Tencent Files\1432874755\FileRecv\ç¨‹åº\HOG\HOG_llc\dictionary\center.mat'];
+%èšç±»ç»“æœæ‰€å­˜æ”¾çš„matæ–‡ä»¶
 load(Bpath);
 nCodebook = size(centers, 2);              % size of the codebook
 dFea = sum(nCodebook*pyramid.^2);
